@@ -1,3 +1,3 @@
-# Package 📦 apps.myname
+# Package 📦 apps.hcm
 
 

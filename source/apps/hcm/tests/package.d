@@ -1,1 +1,1 @@
-module apps.myname.tests;
+module apps.hcm.tests;

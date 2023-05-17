@@ -1,18 +1,18 @@
-module apps.myname.views.index;
+module apps.hcm.views.index;
 
-import apps.myname;
+import apps.hcm;
 @safe:
 
-class DMYNAMEIndexView : DView {
-  mixin(ViewThis!("MYNAMEIndexView"));
+class DHCMIndexView : DView {
+  mixin(ViewThis!("HCMIndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DMYNAMEIndexView~":DMYNAMEIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DHCMIndexView~":DHCMIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
-      H5Div("APP myname -> Error")
+      H5Div("APP hcm -> Error")
     ].toH5;
   }
 }
-mixin(ViewCalls!("MYNAMEIndexView"));
+mixin(ViewCalls!("HCMIndexView"));

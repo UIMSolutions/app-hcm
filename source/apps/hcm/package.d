@@ -1,4 +1,4 @@
-module apps.myname;
+module apps.hcm;
 
 mixin(ImportPhobos!());
 
@@ -18,18 +18,18 @@ public import uim.servers;
 public import langs.javascript;
 
 public {
-  import apps.myname.controllers;
-  import apps.myname.helpers;
-  import apps.myname.routers;
-  import apps.myname.tests;
-  import apps.myname.views;
+  import apps.hcm.controllers;
+  import apps.hcm.helpers;
+  import apps.hcm.routers;
+  import apps.hcm.tests;
+  import apps.hcm.views;
 }
 
-DApp mynameApp;
+DApp hcmApp;
 static this() {
-  mynameApp = App
-    .name("mynameApp")
-    .rootPath("/apps/myname")
-    .addRoute(Route("", HTTPMethod.GET, MYNAMEIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, MYNAMEIndexPageController));
+  hcmApp = App
+    .name("hcmApp")
+    .rootPath("/apps/hcm")
+    .addRoute(Route("", HTTPMethod.GET, HCMIndexPageController))
+    .addRoute(Route("/", HTTPMethod.GET, HCMIndexPageController));
 }
