@@ -1,1 +1,1 @@
-module apps.myname.views.components;
+module apps.hcm.views.components;

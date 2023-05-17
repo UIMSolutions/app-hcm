@@ -1,7 +1,7 @@
-module apps.myname.views.forms;
+module apps.hcm.views.forms;
 
 public {
-  import apps.myname.views.forms.headers;
-  import apps.myname.views.forms.bodies;
-  import apps.myname.views.forms.footers;
+  import apps.hcm.views.forms.headers;
+  import apps.hcm.views.forms.bodies;
+  import apps.hcm.views.forms.footers;
 }

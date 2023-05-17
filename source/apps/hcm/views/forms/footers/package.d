@@ -1,2 +1,2 @@
-module apps.myname.views.forms.footers;
+module apps.hcm.views.forms.footers;
 

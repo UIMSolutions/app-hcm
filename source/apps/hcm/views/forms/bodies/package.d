@@ -1,2 +1,2 @@
-module apps.myname.views.forms.bodies;
+module apps.hcm.views.forms.bodies;
 
