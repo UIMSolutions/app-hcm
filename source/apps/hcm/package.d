@@ -25,11 +25,11 @@ public {
   import apps.hcm.views;
 }
 
-DApp hcmApp;
 static this() {
-  hcmApp = App
+  AppRegistry.register("apps.hcm",  
+    App
     .name("hcmApp")
     .rootPath("/apps/hcm")
     .addRoute(Route("", HTTPMethod.GET, HCMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, HCMIndexPageController));
+    .addRoute(Route("/", HTTPMethod.GET, HCMIndexPageController)));
 }
