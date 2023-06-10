@@ -3,7 +3,7 @@ module apps.hcm.controllers.pages.error;
 import apps.hcm;
 @safe:
 
-class DHCMErrorPageController : DAPPPageController {
+class DHCMErrorPageController : DPageController {
   mixin(ControllerThis!("HCMErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {

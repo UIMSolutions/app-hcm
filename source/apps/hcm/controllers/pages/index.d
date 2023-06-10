@@ -3,7 +3,7 @@ module apps.hcm.controllers.pages.index;
 import apps.hcm;
 @safe:
 
-class DHCMIndexPageController : DAPPPageController {
+class DHCMIndexPageController : DPageController {
   mixin(ControllerThis!("HCMIndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
