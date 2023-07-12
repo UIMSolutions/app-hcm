@@ -27,9 +27,11 @@ public {
 
 static this() {
   AppRegistry.register("apps.hcm",  
-    App
-    .name("hcmApp")
-    .rootPath("/apps/hcm")
-    .addRoute(Route("", HTTPMethod.GET, HCMIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, HCMIndexPageController)));
+    App("hcmApp", "/apps/hcm")
+      .importTranslations()
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
