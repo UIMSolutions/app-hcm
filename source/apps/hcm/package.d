@@ -27,7 +27,7 @@ public {
 
 static this() {
   AppRegistry.register("apps.hcm",  
-    App("hcmApp", "/apps/hcm")
+    App("hcmApp", "apps/hcm")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
