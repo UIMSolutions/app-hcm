@@ -2,8 +2,10 @@ module apps.hcm;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -26,12 +28,21 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.hcm",  
-    App("hcmApp", "apps/hcm")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  // Create app
+  auto myApp = App("hcmApp", "apps/hcm");
+
+  // Customize app
+  with(myApp) {
+    importTranslations;
+    addControllers([
+      "hcm.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("hcm.index")),
+      Route("/", HTTPMethod.GET, controller("hcm.index"))
     );
+  }
+
+  // register app
+  AppRegistry.register("apps.hcm", myApp);
 }
